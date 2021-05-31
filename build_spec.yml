@@ -32,10 +32,10 @@ steps:
     name: "Save"
     command: |
       docker images >> dockImagesResult.txt
-   - type: Command
-    name: "Save"
-    command: |
-      ls >> dockImagesResult.txt
+#    - type: Command
+#     name: "Save"
+#     command: |
+#       ls >> dockImagesResult.txt
 #   - type: Command
 #     name: "Shutdown the app"
 #     command: |
