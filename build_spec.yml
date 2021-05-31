@@ -24,10 +24,10 @@ steps:
 #     name: "Test the app"
 #     command: |
 #       curl -s localhost:5000 > docktest-result.txt
-  - type: Command
-    name: "Save"
-    command: |
-      docker save --output docktest.tar docktest
+#   - type: Command
+#     name: "Save"
+#     command: |
+#       docker save --output docktest.tar docktest
   - type: Command
     name: "Save"
     command: |
