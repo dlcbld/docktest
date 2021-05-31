@@ -5,7 +5,7 @@ runAs: root
 shell: bash
 env:
   variables:
-    "testEnv" : "Hello Bala, This is a test variable!!!"
+    "testEnv" : "This is a test variable!!!"
 
 steps:
   - type: Command
@@ -16,36 +16,19 @@ steps:
     name: "Dockerize"
     command: |
       docker build -t docktest .
-#   - type: Command
-#     name: "Run the app Locally"
-#     command: |
-#       docker run -d -p 5000:5000 --name docktest docktest:1.0
-#   - type: Command
-#     name: "Test the app"
-#     command: |
-#       curl -s localhost:5000 > docktest-result.txt
   - type: Command
     name: "Save"
     command: |
       docker save docktest -o docktest.tar
   - type: Command
-    name: "Save"
+    name: "SaveResult"
     command: |
       ls >> dockImagesResult.txt
-#    - type: Command
-#     name: "Save"
-#     command: |
-#       ls >> dockImagesResult.txt
-#   - type: Command
-#     name: "Shutdown the app"
-#     command: |
-#       docker stop docktest >> docktest-result.txt
-#       docker rm docktest >> docktest-result.txt
 artifacts:
-  - name: docktest
-    type: BINARY
-    files:
-      - dockImagesResult.txt
+#   - name: docktest
+#     type: BINARY
+#     files:
+#       - dockImagesResult.txt
   - name: docktest
     type: FILE
     files:
