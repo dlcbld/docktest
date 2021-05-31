@@ -27,11 +27,15 @@ steps:
   - type: Command
     name: "Save"
     command: |
+      docker save --output docktest.tar docktest
+  - type: Command
+    name: "Save"
+    command: |
       docker images >> dockImagesResult.txt
-#   - type: Command
-#     name: "Save"
-#     command: |
-#       docker save docktest:1.0 > docktest.tar
+   - type: Command
+    name: "Save"
+    command: |
+      ls >> dockLsResult.txt
 #   - type: Command
 #     name: "Shutdown the app"
 #     command: |
@@ -42,3 +46,4 @@ artifacts:
     type: BINARY
     files:
       - dockImagesResult.txt
+      - dockLsResult.txt
