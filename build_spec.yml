@@ -43,6 +43,6 @@ steps:
 #       docker rm docktest >> docktest-result.txt
 artifacts:
   - name: docktest
-    type: BINARY
+    type: FILE
     files:
       - docktest.tar
