@@ -24,10 +24,10 @@ steps:
 #     name: "Test the app"
 #     command: |
 #       curl -s localhost:5000 > docktest-result.txt
-#   - type: Command
-#     name: "Dockerize"
-#     command: |
-#       docker save docktest:1.0 | gzip > docktest.tar.gz
+  - type: Command
+    name: "Save"
+    command: |
+      docker save docktest > docktest.tar
   - type: Command
     name: "Shutdown the app"
     command: |
