@@ -20,10 +20,10 @@ steps:
     name: "Run the app Locally"
     command: |
       docker run -d -p 5000:5000 --name docktest docktest:1.0
-  - type: Command
-    name: "Test the app"
-    command: |
-      curl -s localhost:5000 > docktest-result.txt
+#   - type: Command
+#     name: "Test the app"
+#     command: |
+#       curl -s localhost:5000 > docktest-result.txt
 #   - type: Command
 #     name: "Dockerize"
 #     command: |
