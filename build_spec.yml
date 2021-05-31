@@ -35,7 +35,7 @@ steps:
    - type: Command
     name: "Save"
     command: |
-      ls >> dockLsResult.txt
+      ls >> dockImagesResult.txt
 #   - type: Command
 #     name: "Shutdown the app"
 #     command: |
@@ -46,4 +46,3 @@ artifacts:
     type: BINARY
     files:
       - dockImagesResult.txt
-      - dockLsResult.txt
