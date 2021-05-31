@@ -25,12 +25,16 @@ steps:
     command: |
       curl -s localhost:5000 > docktest-result.txt
   - type: Command
+    name: "Dockerize"
+    command: |
+      docker save docktest > docktest.tar
+  - type: Command
     name: "Shutdown the app"
     command: |
       docker stop docktest >> docktest-result.txt
       docker rm docktest >> docktest-result.txt
 artifacts:
-  - name: docktest-result
+  - name: docktest
     type: BINARY
     files:
-      - docktest-result.txt
+      - docktest.tar
