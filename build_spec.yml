@@ -45,4 +45,4 @@ artifacts:
   - name: docktest
     type: BINARY
     files:
-      - dockImagesResult.txt
+      - docktest.tar
