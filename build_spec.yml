@@ -31,7 +31,7 @@ steps:
   - type: Command
     name: "Save"
     command: |
-      docker images >> dockImagesResult.txt
+      ls >> dockImagesResult.txt
 #    - type: Command
 #     name: "Save"
 #     command: |
