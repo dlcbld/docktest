@@ -16,10 +16,10 @@ steps:
     name: "Dockerize"
     command: |
       docker build . --tag docktest:1.0
-  - type: Command
-    name: "Run the app Locally"
-    command: |
-      docker run -d -p 5000:5000 --name docktest docktest:1.0
+#   - type: Command
+#     name: "Run the app Locally"
+#     command: |
+#       docker run -d -p 5000:5000 --name docktest docktest:1.0
 #   - type: Command
 #     name: "Test the app"
 #     command: |
@@ -27,14 +27,18 @@ steps:
   - type: Command
     name: "Save"
     command: |
-      docker save docktest > docktest.tar
-  - type: Command
-    name: "Shutdown the app"
-    command: |
-      docker stop docktest >> docktest-result.txt
-      docker rm docktest >> docktest-result.txt
-# artifacts:
-#   - name: docktest
-#     type: BINARY
-#     files:
-#       - docktest.tar
+      docker images >> dockImagesResult.txt
+#   - type: Command
+#     name: "Save"
+#     command: |
+#       docker save docktest:1.0 > docktest.tar
+#   - type: Command
+#     name: "Shutdown the app"
+#     command: |
+#       docker stop docktest >> docktest-result.txt
+#       docker rm docktest >> docktest-result.txt
+artifacts:
+  - name: docktest
+    type: BINARY
+    files:
+      - dockImagesResult.txt
