@@ -1,6 +1,6 @@
 version: 0.1
 component: build
-timeoutInSeconds: 6000
+timeoutInSeconds: 60000
 runAs: root
 shell: bash
 env:
@@ -30,6 +30,6 @@ artifacts:
 #     files:
 #       - dockImagesResult.txt
   - name: docktest
-    type: FILE
+    type: BINARY
     files:
       - docktest.tar
