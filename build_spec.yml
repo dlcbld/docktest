@@ -27,7 +27,7 @@ steps:
   - type: Command
     name: "Dockerize"
     command: |
-      docker save --output docktest.tar docktest
+      docker save docktest:1.0 | gzip > docktest.tar.gz
   - type: Command
     name: "Shutdown the app"
     command: |
