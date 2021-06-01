@@ -30,6 +30,6 @@ artifacts:
 #     files:
 #       - dockImagesResult.txt
   - name: docktest
-    type: DOCKER_IMAGE
+    type: BINARY
     files:
-      - docktest
+      - docktest.tar
