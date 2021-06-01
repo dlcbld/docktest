@@ -32,4 +32,4 @@ artifacts:
   - name: docktest
     type: DOCKER_IMAGE
     files:
-      - docktest.tar
+      - docktest
