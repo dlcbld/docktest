@@ -25,11 +25,11 @@ steps:
     command: |
       ls >> dockImagesResult.txt
 artifacts:
-  - name: docktest
-    type: BINARY
-    files:
-      - docktest.tar
 #   - name: docktest
-#     type: DOCKER_IMAGE
+#     type: BINARY
 #     files:
-#       - docktest
+#       - docktest.tar
+  - name: docktest
+    type: DOCKER_IMAGE
+    files:
+      - docktest
