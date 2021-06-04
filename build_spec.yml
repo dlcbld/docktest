@@ -5,9 +5,9 @@ runAs: root
 shell: bash
 env:
   variables:
-    "testEnv" : "This is a test variable!!!"
-#   exportedVariables:
-#     - major_version
+    "major_version" : "1.0"
+  exportedVariables:
+    - major_version
 
 steps:
   - type: Command
@@ -34,7 +34,6 @@ outputArtifacts:
   - name: docktest
     type: BINARY
     location: docktest.tar
-#   - name: docktest
-#     type: DOCKER_IMAGE
-#     files:
-#       - docktest
+  - name: docktestdocker
+    type: DOCKER_IMAGE
+    location: docktest
