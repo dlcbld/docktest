@@ -27,8 +27,7 @@ steps:
 outputArtifacts:
   - name: docktest
     type: BINARY
-    files:
-      - docktest.tar
+    location: docktest.tar
 #   - name: docktest
 #     type: DOCKER_IMAGE
 #     files:
