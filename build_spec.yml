@@ -6,6 +6,8 @@ shell: bash
 env:
   variables:
     "testEnv" : "This is a test variable!!!"
+#   exportedVariables:
+#     - major_version
 
 steps:
   - type: Command
@@ -24,6 +26,10 @@ steps:
     name: "SaveResult"
     command: |
       ls >> dockImagesResult.txt
+#   - type: Command
+#     name: "SaveResult"
+#     command: |
+#       export major_version=1.2
 outputArtifacts:
   - name: docktest
     type: BINARY
