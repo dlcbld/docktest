@@ -24,7 +24,7 @@ steps:
     name: "SaveResult"
     command: |
       ls >> dockImagesResult.txt
-artifacts:
+outputArtifacts:
   - name: docktest
     type: BINARY
     files:
