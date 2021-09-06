@@ -22,6 +22,7 @@ steps:
     name: "Save"
     command: |
       docker save docktest -o docktest.tar
+      pwd
   - type: Command
     name: "SaveResult"
     command: |
