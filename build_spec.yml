@@ -11,14 +11,13 @@ steps:
       echo step1 printing
       echo step1 printing again
       
-      git remote add origin https://github.com/dlcbld/docktest.git
       git fetch origin
       echo Done fetching
       
-      git checkout origin/poc1
-      echo Done checking out poc1
-      
-      git branch
+      git branch -a
       echo done branching
       
+      git checkout origin/poc1
+      echo Done checking out poc1
+            
       git diff --name-only master...poc1
