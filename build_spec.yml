@@ -11,11 +11,15 @@ steps:
       echo step1 printing
       echo step1 printing again
       
+      # This is for allowing git fetch to get data for all remote branches
+      git config remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"
+      
+      # This is for getting data for all remote branches
       git fetch origin
       echo Done fetching
       
+      # This is debug statement to ensure all branches are pulled from remote
       git branch -a
-      echo done branching
       
       git checkout origin/poc1
       echo Done checking out poc1
