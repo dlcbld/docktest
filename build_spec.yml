@@ -10,7 +10,7 @@ steps:
     command: |
       echo step1 printing
       echo step1 printing again
-      git fetch --all
+      git fetch origin
       echo Done fetching
       git branch
       echo Done branching
