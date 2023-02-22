@@ -11,5 +11,6 @@ steps:
       echo step1 printing
       echo step1 printing again
       git fetch --all
+      echo Done fetching
       git checkout poc1
       git diff --name-only master...poc1
