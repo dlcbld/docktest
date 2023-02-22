@@ -10,9 +10,7 @@ steps:
     command: |
       echo step1 printing
       echo step1 printing again
-      git fetch origin poc1
+      git fetch origin
       echo Done fetching
-      git branch
-      echo Done branching
       git checkout origin/poc1
-      git diff --name-only master...poc1
+      git diff --name-only origin/master...origin/poc1
