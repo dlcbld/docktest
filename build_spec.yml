@@ -11,6 +11,7 @@ steps:
       echo step1 printing
       echo step1 printing again
       
+      git remote add origin https://github.com/dlcbld/docktest.git
       git fetch origin
       echo Done fetching
       
