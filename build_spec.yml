@@ -21,7 +21,7 @@ steps:
       # This is debug statement to ensure all branches are pulled from remote
       git branch -a
       
-      git checkout origin/poc1
+      git checkout poc1
       echo Done checking out poc1
             
       git diff --name-only master...poc1
