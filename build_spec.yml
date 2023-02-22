@@ -10,5 +10,6 @@ steps:
     command: |
       echo step1 printing
       echo step1 printing again
+      git fetch --all
       git checkout poc1
       git diff --name-only master...poc1
